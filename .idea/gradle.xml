@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/coffee" />
             <option value="$PROJECT_DIR$/learnbinder" />
+            <option value="$PROJECT_DIR$/testdagger" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/coffee/coffee.iml" filepath="$PROJECT_DIR$/coffee/coffee.iml" />
       <module fileurl="file://$PROJECT_DIR$/learnbinder/learnbinder.iml" filepath="$PROJECT_DIR$/learnbinder/learnbinder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testdagger/testdagger.iml" filepath="$PROJECT_DIR$/testdagger/testdagger.iml" />
     </modules>
   </component>
 </project>
