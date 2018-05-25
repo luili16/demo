@@ -12,6 +12,9 @@ import android.widget.Button;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import coffee.CoffeeApp;
+import coffee.DaggerCoffeeApp_CoffeeShop;
+
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener {
 
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         String android_socket_zygote = System.getenv("ANDROID_SOCKET_zygote");
-        Log.d("main","env is : " + android_socket_zygote);
+        Log.d("main", "env is : " + android_socket_zygote);
 
         Button start = findViewById(R.id.start);
         start.setOnClickListener(this);
@@ -32,22 +35,26 @@ public class MainActivity extends AppCompatActivity
         connect.setOnClickListener(this);
         Button send = findViewById(R.id.send);
         send.setOnClickListener(this);
+
+
+        //CoffeeApp.CoffeeShop coffeeShop = DaggerCoffeeApp_CoffeeShop.builder().build();
+        //coffeeShop.maker().brew();
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.start:
-                Intent service = new Intent(this,SocketBgService.class);
+                Intent service = new Intent(this, SocketBgService.class);
                 startService(service);
                 break;
             case R.id.connect:
-                new Thread(){
+                new Thread() {
                     @Override
                     public void run() {
                         super.run();
 
-                        Log.d("main","创建localSocket");
+                        Log.d("main", "创建localSocket");
                         localSocket = new LocalSocket();
                         LocalSocketAddress address = new LocalSocketAddress("SocketBgService");
                         try {
@@ -66,7 +73,7 @@ public class MainActivity extends AppCompatActivity
                     public void run() {
                         super.run();
 
-                        Log.d("main","发送数据");
+                        Log.d("main", "发送数据");
                         try {
                             mOps.write("helloworld\n".getBytes());
                             mOps.flush();
