@@ -1,3 +1,3 @@
-include ':app', ':coffee', ':testdagger',
+include ':app', ':coffee', ':testdagger', ':todoappdagger',
         //'jnidemo',
         'learnbinder'

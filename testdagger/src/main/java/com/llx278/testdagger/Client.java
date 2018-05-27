@@ -9,7 +9,7 @@ import javax.inject.Inject;
 public class Client {
 
     @Inject
-    public Service mService;
+    Service mService;
 
     public Client() {
 

@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/coffee" />
             <option value="$PROJECT_DIR$/learnbinder" />
             <option value="$PROJECT_DIR$/testdagger" />
+            <option value="$PROJECT_DIR$/todoappdagger" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
