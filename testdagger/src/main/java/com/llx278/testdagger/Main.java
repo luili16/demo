@@ -11,9 +11,13 @@ public class Main {
         System.out.println("in Main");
 
         Client client = new Client();
+        Client1 client1 = new Client1();
         //DaggerFactoryComponent.create().inject(client);
-        DaggerFactoryComponent.builder().build().test(client);
+        FactoryComponent component = DaggerFactoryComponent.builder().build();
+        component.test(client);
+        component.injectTo(client1);
         client.print();
+        client1.print();
 
     }
 
