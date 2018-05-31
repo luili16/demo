@@ -4,6 +4,7 @@ import dagger.Module;
 import dagger.Provides;
 
 /**
+ *
  * Created by liu on 18-5-28.
  */
 
@@ -19,5 +20,4 @@ public class ServiceModel {
     Service1 provideService1() {
         return new Service1();
     }
-
 }

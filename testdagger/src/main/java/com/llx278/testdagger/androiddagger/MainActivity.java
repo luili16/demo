@@ -6,6 +6,10 @@ import android.support.annotation.Nullable;
 
 import com.llx278.testdagger.R;
 
+import javax.inject.Inject;
+
+import dagger.android.AndroidInjection;
+
 /**
  *
  * Created by liu on 18-5-28.
@@ -13,12 +17,14 @@ import com.llx278.testdagger.R;
 
 public class MainActivity extends Activity {
 
+    @Inject
+    MainPresenter mPresenter;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
+        mPresenter.method1();
     }
 }
