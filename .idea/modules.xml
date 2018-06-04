@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/demo.iml" filepath="$PROJECT_DIR$/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/learnbinder/learnbinder.iml" filepath="$PROJECT_DIR$/learnbinder/learnbinder.iml" />
       <module fileurl="file://$PROJECT_DIR$/testdagger/testdagger.iml" filepath="$PROJECT_DIR$/testdagger/testdagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testrxjava/testrxjava.iml" filepath="$PROJECT_DIR$/testrxjava/testrxjava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testrxjava1/testrxjava1.iml" filepath="$PROJECT_DIR$/testrxjava1/testrxjava1.iml" />
       <module fileurl="file://$PROJECT_DIR$/todoappdagger/todoappdagger.iml" filepath="$PROJECT_DIR$/todoappdagger/todoappdagger.iml" />
     </modules>
   </component>
