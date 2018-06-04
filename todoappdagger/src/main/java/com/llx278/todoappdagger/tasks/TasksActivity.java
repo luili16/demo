@@ -8,7 +8,6 @@ import com.llx278.todoappdagger.R;
 
 public class TasksActivity extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

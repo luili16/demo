@@ -9,7 +9,6 @@ import javax.inject.Inject;
 
 public class Service {
 
-    @Inject
     public Service() {
     }
 
