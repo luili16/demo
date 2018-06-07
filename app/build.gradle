@@ -26,4 +26,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:0.5'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation project(path: ':coffee')
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 }

@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".TranslucentActivity" android:theme="@android:style/Theme.Translucent"/>
+
         <service android:name=".SocketBgService" android:process=":remote"/>
     </application>
 

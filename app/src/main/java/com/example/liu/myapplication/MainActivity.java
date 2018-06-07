@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.io.OutputStream;
 
 import coffee.CoffeeApp;
-import coffee.DaggerCoffeeApp_CoffeeShop;
 
 public class MainActivity extends AppCompatActivity
         implements View.OnClickListener {
@@ -25,10 +24,8 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Log.d("main","onCreate");
         String android_socket_zygote = System.getenv("ANDROID_SOCKET_zygote");
-        Log.d("main", "env is : " + android_socket_zygote);
-
         Button start = findViewById(R.id.start);
         start.setOnClickListener(this);
         Button connect = findViewById(R.id.connect);
@@ -42,11 +39,58 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("main","onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("main","OnResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("main","onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("main","onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("main","onDestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("main","onRestart");
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.d("main","onSaveInstanceState");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.start:
-                Intent service = new Intent(this, SocketBgService.class);
-                startService(service);
+                Intent intent = new Intent(getApplicationContext(),TranslucentActivity.class);
+                startActivity(intent);
                 break;
             case R.id.connect:
                 new Thread() {
